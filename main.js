@@ -1,6 +1,5 @@
-import Phaser, {Game} from 'phaser';
-import BootScene from './scenes/BootScene';
-import GameScene from './scenes/GameScene';
+import BootScene from './scenes/BootScene.js';
+import GameScene from './scenes/GameScene.js';
 
 console.log(document.getElementById('game-canvas'));
 
@@ -15,8 +14,7 @@ const config = {
 	    debug: true
 	},
     },
-    scene: [BootScene, GameScene]
+   scene: [BootScene, GameScene]
 };
 
-const game = new Game(config);
-
+const game = new Phaser.Game(config);
