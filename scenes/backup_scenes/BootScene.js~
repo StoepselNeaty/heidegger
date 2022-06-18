@@ -1,6 +1,4 @@
-//import Phaser from 'phaser';
-
-class BootScene extends Scene {
+class BootScene extends Phaser.Scene {
     constructor(){
 	super({key: 'scene-boot'});
     }
@@ -12,6 +10,7 @@ class BootScene extends Scene {
 	this.load.image('manWest', 'assets/man_west.png');
 	this.load.image('manEast', 'assets/man_east.png');
 	this.load.image('coffee', 'assets/coffee_machine.png');
+	this.load.spriteSheet('manDown', ' 
     }
     
     create(){
