@@ -1,0 +1,49 @@
+	  
+	  path_1 = this.add.path(150, 150);
+	  path_1.lineTo(300,150);
+	  path_1.lineTo(300,300);
+	  path_1.lineTo(150,300);
+	  path_1.lineTo(150,150);
+	  enemies = this.add.follower(path_1, 0, 0, 'man_1');
+	  enemies.startFollow({
+	      positionOnPath: true,
+	      duration: 8000,
+	      repeat: -1,
+	      rotateToPath: false,
+	      verticalAdjust: true
+	  });
+
+
+    path_2 = this.add.path(500, 500);
+    path_2.lineTo(x, 500);
+    path_2.lineTo(x, y);
+    path_2.lineTo(500, y);
+    path_2.lineTo(500, 500);
+    enemies = this.add.follower(path_2, 0, 0, 'man_2');
+    enemies.startFollow({
+	positionOnPath: true,
+	duration: 8000,
+	repeat: -1,
+	rotateToPath: false,
+	verticalAdjust: true
+    });
+
+    var start_x = getRandomInt(x);
+    var start_y = getRandomInt(y);
+    
+    path_3 = this.add.path(start_x,
+			   start_y);
+    path_3.lineTo(getRandomInt(x), getRandomInt(y));
+    path_3.lineTo(getRandomInt(x), getRandomInt(y));
+    path_3.lineTo(getRandomInt(x), getRandomInt(y));
+    path_3.lineTo(getRandomInt(x), getRandomInt(y));
+    path_3.lineTo(getRandomInt(x), getRandomInt(y));    
+    path_3.lineTo(start_x, start_y);
+    enemies = this.add.follower(path_3, 0, 0, 'man_2');
+    enemies.startFollow({
+	positionOnPath: true,
+	duration: 8000,
+	repeat: -1,
+	rotateToPath: false,
+	verticalAdjust: true
+    });    

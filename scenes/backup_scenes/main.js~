@@ -1,0 +1,23 @@
+import Phaser, {Game} from 'phaser';
+import GameScene from './scenes/GameScene';
+import BootScene from './scenes/BootScene';
+
+console.log(document.getElementById('game-canvas'));
+
+const config = {
+    type: Phaser.CANVAS,
+    width: 800,
+    height: 600,
+    pixelArt: true,
+    physics: {
+	default: 'arcade',
+	arcade: {
+	    debug: true
+	},
+    },
+    scene: [BootScene, GameScene]
+};
+console.log(config);
+const game = new Game(config);
+console.log(game);
+

@@ -1,0 +1,4 @@
+import Phaser, {Game} from 'phaser.min.js';
+import GameScene from 'scenes/GameScene';
+
+const canvas = document.getElementById();

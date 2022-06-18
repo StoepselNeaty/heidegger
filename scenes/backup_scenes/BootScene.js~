@@ -1,0 +1,23 @@
+//import Phaser from 'phaser';
+
+class BootScene extends Scene {
+    constructor(){
+	super({key: 'scene-boot'});
+    }
+
+    preload(){
+	this.load.image('floor', 'assets/wooden_floor_1.png');
+	this.load.image('manNorth', 'assets/man_north.png');
+	this.load.image('manSouth', 'assets/man_south.png');
+	this.load.image('manWest', 'assets/man_west.png');
+	this.load.image('manEast', 'assets/man_east.png');
+	this.load.image('coffee', 'assets/coffee_machine.png');
+    }
+    
+    create(){
+	this.scene.start('scene-game');
+    }
+}
+export default BootScene;
+
+// https://photonstorm.github.io/phaser3-docs/Phaser.Types.Scenes.html#.SettingsConfig
